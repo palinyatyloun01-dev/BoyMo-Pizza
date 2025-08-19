@@ -1,5 +1,6 @@
-
 "use client";
+
+export const dynamic = 'force-dynamic';
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -240,6 +241,7 @@ export default function IncomePage() {
                                             <SelectValue placeholder={text('selectSize')} />
                                         </SelectTrigger>
                                         <SelectContent>
+                                            {/* ... */}
                                             <SelectItem value="6">{text('size6')}</SelectItem>
                                             <SelectItem value="7">{text('size7')}</SelectItem>
                                             <SelectItem value="9">{text('size9')}</SelectItem>
