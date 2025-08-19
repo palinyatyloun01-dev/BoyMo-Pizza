@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import React, { Suspense } from "react";
 import IncomePageContent from "./IncomePageContent";
 
 export const dynamic = "force-dynamic";
