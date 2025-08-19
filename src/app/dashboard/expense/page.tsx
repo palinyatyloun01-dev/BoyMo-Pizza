@@ -1,5 +1,6 @@
-
 "use client";
+
+export const dynamic = "force-dynamic";
 
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -15,7 +16,6 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { Calendar } from '@/components/ui/calendar';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
-
 
 export default function ExpensePage() {
     const { t, isTranslating } = useTranslation();
@@ -66,8 +66,6 @@ export default function ExpensePage() {
                         setExpenseItem("ອື່ນໆ");
                     }
                     setDescription(additionalDesc);
-
-
                 } else {
                     toast({ variant: 'destructive', title: "Error", description: "Transaction not found." });
                     router.push('/dashboard');
@@ -78,7 +76,7 @@ export default function ExpensePage() {
         } else {
             setIsLoading(false);
         }
-    }, [searchParams, getTransactionById, router, toast]); // Removed expenseItems from dependency array
+    }, [searchParams, getTransactionById, router, toast]);
 
     const handleSubmit = async () => {
         const expenseAmount = Number(amount);
