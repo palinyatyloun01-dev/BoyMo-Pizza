@@ -4,76 +4,65 @@
 
 @layer base {
   :root {
-    --background: 220 8% 10%;
-    --foreground: 210 40% 98%;
-    --card: 220 8% 14%;
-    --card-foreground: 210 40% 98%;
-    --popover: 220 8% 10%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 120 60% 30%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 0 84% 60%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 0 84% 60%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 0 84% 60%;
-    --radius: 0.5rem;
-    --chart-1: 0 72% 51%;
-    --chart-2: 142 71% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
-    --sidebar-background: 220 8% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 0 72% 51%;
-    --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 220 8% 14%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 17%;
-    --sidebar-ring: 0 72% 51%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
   }
 
   .dark {
-    --background: 120 60% 30%;
-    --foreground: 210 40% 98%;
-    --card: 220 8% 14%;
-    --card-foreground: 210 40% 98%;
-    --popover: 220 8% 10%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 0 84% 60%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 120 60% 30%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 0 84% 60%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 0 84% 60%;
-    --chart-1: 0 72% 51%;
-    --chart-2: 142 71% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --sidebar-background: 120 50% 15%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 0 72% 51%;
-    --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 120 60% 30%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 17%;
-    --sidebar-ring: 0 72% 51%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
 }
 
@@ -84,35 +73,4 @@
   body {
     @apply bg-background text-foreground;
   }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 15s linear infinite;
-}
-
-@keyframes color-cycle {
-  0% { color: #FF0000; }
-  10% { color: #800080; }
-  20% { color: #FFFF00; }
-  30% { color: #008000; }
-  40% { color: #00FF00; }
-  50% { color: #800000; }
-  60% { color: #000000; }
-  70% { color: #FF00FF; }
-  80% { color: #000080; }
-  90% { color: #0000FF; }
-  100% { color: #FF0000; }
-}
-
-.animate-color-cycle {
-  animation: color-cycle 10s linear infinite;
 }
